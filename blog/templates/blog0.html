@@ -1,0 +1,63 @@
+<!doctype html>
+  {% load static %}
+
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+
+</head>
+<body>
+  <nav class="navbar sticky-top">
+      <a class="navbar-brand a" href="#">YOUR BEST BLOG!</a>
+</nav>
+  <div id="main" class="flex-container">
+
+    <div class="row">
+      <div class='col-sm'>
+        <p style="font-size: 1.5em">
+          <span style="color:red">Hi there.</span>
+           I've created this blog-page mostly on learning purposes.
+        JS part in this version is written in JQuery and plain JS, no React.
+      </p>
+      </div>
+      <div class='col-sm'>
+          <h3>It's the blog page! </h3>
+          <form id='post_submit'>
+              <div class='form-group'>
+                <label for="title">Title for your post:</label>
+                <input type="text" style="maxlength:140"
+                placeholder="Title" class="form-control" id="title" required>
+              </div>
+              <div class='form-group'>
+                <label for="text">Type content here:</label>
+                <textarea class="form-control" cols=30 rows=2 id="text"
+                  placeholder="Type your post over here!"></textarea>
+              </div>
+              <button id='btn_submit' type='button' class="btn btn-default">Submit!</button>
+              <div class="alert alert-warning" style="display: none; margin: 20px">
+                <strong>Внимание!</strong> Отправленный пост не был принят сервером.
+                Возможно он пуст.
+
+              </div>
+          </form>
+        </div>
+        </div>
+        <div class='row'>
+          <hr>
+          <div class='col-xl'>
+            <div class='Posts'>
+                <button id="btn_refresh" class="btn-lg btn-default">Refresh feed</button>
+                <div id='postfeed'>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+<script src="{% static 'post.js' %}"> </script>
+<script src="{% static 'csrf.js' %}"> </script>
+</body>

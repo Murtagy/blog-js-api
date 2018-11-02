@@ -1,0 +1,45 @@
+html, body{
+  height: 100%;
+  background-color: #3e6792;
+}
+#main {
+  background-image: linear-gradient(180deg, #f2f8ff, white);
+  height: 100%;
+  margin: auto;
+}
+.navbar {
+  background-color: #c3defb;
+  width: 100%;
+
+}
+.row {
+  background-image: linear-gradient(180deg, #f2f8ff, white);
+  padding: 20px;
+}
+.post {
+  border-radius: 40px;
+  background-color: white;
+  margin: 20px;
+  padding: 20px 20px 20px 20px;
+
+}
+
+.post_title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+}
+.post_date {
+  text-align: right;
+}
+.post_text {
+  text-align: left;
+  margin:20px 20px 40px 20px;
+  text-indent: 50px;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+a {
+  padding-left: 40%;
+  font-weight: bold;
+}
